@@ -1,0 +1,101 @@
+/* --- registro.css --- */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Un poco más alto para que quepa todo */
+    padding: 2rem 0;
+}
+
+.register-box {
+    background: var(--bg-panel);
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px; /* Un poco más ancho que el login */
+    border: 1px solid var(--accent-gold);
+    text-align: center;
+}
+
+/* Estilos de inputs generales */
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+/* Fila para poner contraseñas lado a lado */
+.form-group-row {
+    display: flex;
+    gap: 15px;
+}
+
+.half {
+    flex: 1; /* Ocupan el 50% cada uno */
+}
+
+/* Checkbox de términos */
+.terms-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+}
+
+.terms-group input {
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: var(--accent-gold); /* Pone el checkbox dorado */
+}
+
+/* Botón */
+.btn-submit {
+    width: 100%;
+    background: var(--accent-gold);
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #121212;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #b5952f;
+}
+
+/* Responsive para celulares */
+@media (max-width: 500px) {
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .register-box {
+        margin: 20px;
+        padding: 1.5rem;
+    }
+}

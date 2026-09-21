@@ -1,0 +1,96 @@
+/* --- global.css --- */
+:root {
+    --bg-dark: #121212;
+    --bg-panel: #1e1e1e;
+    --bg-card: #252525;
+    --accent-gold: #d4af37;
+    --text-light: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --mtg-blue: #0073e6;
+    --mtg-red: #d3202a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tipografía y Enlaces */
+h1, h2, h3, .logo { font-family: 'Cinzel', serif; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* --- EFECTO CRISTAL EN EL HEADER --- */
+header {
+    background-color: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: sticky; top: 0; z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo { font-size: 1.8rem; color: var(--accent-gold); font-weight: bold; letter-spacing: 2px; }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a:hover { color: var(--accent-gold); text-shadow: 0 0 8px rgba(212, 175, 55, 0.6); }
+
+/* --- MEJORA DE BOTONES GLOBALES --- */
+.btn-login {
+    border: 2px solid var(--accent-gold);
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--accent-gold);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-login:hover {
+    background: var(--accent-gold);
+    color: #000;
+    box-shadow: 0 0 15px var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+/* Barra de Maná */
+.mana-bar { display: flex; height: 5px; width: 100%; }
+.mana-w { background: #f8e7b9; flex: 1; }
+.mana-u { background: #0e68ab; flex: 1; }
+.mana-b { background: #150b00; flex: 1; }
+.mana-r { background: #d3202a; flex: 1; }
+.mana-g { background: #00733e; flex: 1; }
+
+/* Footer */
+footer { background-color: #000; text-align: center; padding: 2rem; margin-top: auto; border-top: 1px solid #333; }
+
+/* --- ANIMACIONES GLOBALES --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
+    100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.2); }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+@media (max-width: 768px) { nav ul { display: none; } }
