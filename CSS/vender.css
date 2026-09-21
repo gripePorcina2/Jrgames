@@ -1,0 +1,130 @@
+/* --- NUEVO vender.css --- */
+.sell-container {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle at top, #1e293b 0%, var(--surface-100) 100%);
+    min-height: calc(100vh - 70px);
+}
+
+.sell-box {
+    background: var(--surface-200);
+    width: 100%;
+    max-width: 800px;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--surface-300);
+    box-shadow: var(--shadow-float);
+}
+
+.sell-box h2 {
+    color: var(--accent-gold);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Grupos del Formulario */
+.form-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--surface-300);
+}
+
+.form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.form-section-title i { color: var(--primary); }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form-group { margin-bottom: 1.5rem; }
+
+.form-group label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--surface-100);
+    border: 1px solid var(--surface-300);
+    color: white;
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    transition: all var(--transition-fast);
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+}
+
+/* Checkboxes para Formatos de Juego */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.check-item {
+    background: var(--surface-100);
+    padding: 10px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.check-item:hover { border-color: var(--surface-300); }
+.check-item input { width: auto; }
+.check-item span { font-size: 0.85rem; color: var(--text-primary); }
+
+/* Área de Carga de Imagen */
+.upload-zone {
+    border: 2px dashed var(--surface-300);
+    padding: 2rem;
+    text-align: center;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-zone:hover {
+    border-color: var(--primary);
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .sell-box { padding: 1.5rem; }
+    .btn-group { flex-direction: column; }
+}
